@@ -1,0 +1,280 @@
+@import url("globals.css");
+
+/* ===== HEADER ===== */
+
+header {
+  width: 100%;
+  background: #C4ABDD;
+  position: relative;
+  z-index: 2;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: var(--roxo-claro);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.container-header {
+  background: var(--roxo-claro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px 40px;
+  color: #FFF;
+  font-size: 1.5rem;
+}
+
+.menus-header button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-left: 10px;
+  background: var(--cor_back);
+  color: var(--cor_font);
+  width: 200px;
+  height: 50px;
+  font-size: 1rem;
+}
+
+.menus-header button:nth-child(1) {
+  --cor_back: #F07A89;
+  --cor_font: #ffebee;
+}
+
+.menus-header button:nth-child(2) {
+  --cor_back: #83A07C;
+  --cor_font: #D8E0D5;
+}
+
+.menus-header button:nth-child(3) {
+  --cor_back: #EBD5F3;
+  --cor_font: var(--roxo-principal);
+}
+
+.menus-header button:hover {
+  transform: translateY(-2px);
+}
+
+.msg-header {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.4rem;
+  color: #ffffff;
+  background-color: var(--roxo-claro);
+  z-index: 1;
+  font-size: 3rem;
+}
+
+/* ===== SEÇÕES BASE ===== */
+
+.sections {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 8%;
+  background-color: #F4EFEA;
+  
+}
+
+.sections .texto {
+  flex: 1;
+}
+
+.sections h2 {
+  font-size: 2.5rem;
+  color: var(--roxo-principal);
+  margin-bottom: 16px;
+}
+
+.sections p {
+  font-size: 1.2rem;
+  color: var(--texto-secundario);
+  max-width: 520px;
+}
+
+.sections .imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.sections img {
+  width: 70%;
+  border-radius: 16px;
+}
+
+/* ===== SEÇÕES ESPECÍFICAS ===== */
+
+.quem_somos {
+  background-color: #F2F2E6;
+}
+
+.cadastro {
+  background-color: #f8f6ce;
+}
+
+.cadastro p {
+  font-size: 1.2rem;
+}
+
+.cadastro button {
+  background: var(--roxo-principal);
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 40px;
+}
+
+.cadastro button:hover {
+  background-color: #5c4475;
+  transform: translateY(-2px);
+}
+
+/* ===== APOIO ===== */
+
+.apoio {
+  padding: 60px 8%;
+  background-color: #F4EFEA;
+  position: relative;
+  overflow: hidden;
+}
+
+.apoio h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--roxo-principal);
+}
+
+.apoio-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card .icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: #9684cc;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--texto-secundario);
+}
+
+/* ===== DECORAÇÕES ===== */
+
+.section-decorada {
+  position: relative;
+  overflow: hidden;
+}
+
+.mulheres-atipicas::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  width: 200px;
+  height: 200px;
+  background: url("../imgs/girassol.png") no-repeat center/contain;
+  opacity: 0.06;
+}
+
+.apoio::before,
+.apoio::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.apoio::before {
+  top: -40px;
+  left: -60px;
+  background-image: url("../imgs/puzzle.png");
+  opacity: 0.07;
+}
+
+.apoio::after {
+  bottom: -50px;
+  right: -50px;
+  background-image: url("../imgs/girassol.png");
+  opacity: 0.06;
+}
+
+.quem_somos::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: url("../imgs/puzzle.png") no-repeat center/contain;
+  opacity: 0.1;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 1024px) {
+  .apoio-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sections {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sections img {
+    width: 100%;
+  }
+
+  .container-header, .menus-header button{
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .apoio-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .container-header .menus-header {
+    display: flex;
+  }
+}

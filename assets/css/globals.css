@@ -1,0 +1,47 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIÁVEIS ===== */
+:root {
+  --roxo-principal: #9773BE;
+  --roxo-claro: #c293f2;
+  --texto-principal: #4A4A4A;
+  --texto-secundario: #5c4475;
+  --fundo-site: #f3e6d5;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--texto-principal);
+  background-color: var(--fundo-site);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===== TÍTULOS ===== */
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* ===== LINKS ===== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== BOTÃO BASE (reutilizável) ===== */
+button {
+  cursor: pointer;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
