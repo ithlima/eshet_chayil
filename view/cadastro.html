@@ -36,7 +36,7 @@ display=swap" rel="stylesheet">
             <input type="date" required>
 
             <label>CPF *</label>
-            <input type="text" id="cpf" placeholder="000.000.000-00" required>
+            <input type="text" id="cpf" placeholder="000.000.000-00" required maxlength="14">
 
             <label>Estado civil</label>
             <select>
@@ -100,6 +100,32 @@ display=swap" rel="stylesheet">
 
         </form>
     </section>
+
+    <script>
+function mascaraCPF(cpf) {
+  cpf = cpf.replace(/\D/g, '');
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+  return cpf;
+}
+
+function mascaraTelefone(tel) {
+  tel = tel.replace(/\D/g, '');
+  tel = tel.replace(/^(\d{2})(\d)/g, '($1) $2');
+  tel = tel.replace(/(\d{5})(\d{4})$/, '$1-$2');
+  return tel;
+}
+
+document.getElementById('cpf').addEventListener('input', function () {
+  this.value = mascaraCPF(this.value);
+});
+
+document.getElementById('telefone').addEventListener('input', function () {
+  this.value = mascaraTelefone(this.value);
+});
+</script>
+
 
 </body>
 
