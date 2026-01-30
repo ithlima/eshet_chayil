@@ -31,6 +31,11 @@ header::after {
   font-size: 1.5rem;
 }
 
+.menus-header{
+  display: flex;
+  flex-direction: row;
+}
+
 .menus-header button {
   padding: 10px 14px;
   border-radius: 8px;
@@ -271,10 +276,5 @@ header::after {
   .apoio-cards {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 550px) {
-  .container-header .menus-header {
-    display: flex;
-  }
 }
