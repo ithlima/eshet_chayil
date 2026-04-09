@@ -22,16 +22,7 @@
 
 <body>
 
-<div id="mobileMenu" class="mobile-menu">
-  <div class="mobile-menu-content">
-    <button id="closeMenu" class="close-btn">&times;</button>
-    
-    <a href="#">Início</a>
-    <a href="#">Sobre</a>
-    <a href="#">Informações</a>
-    <a href="#">Contato</a>
-  </div>
-</div>
+
 
 
   <header class="site-header" id="topo">
@@ -44,20 +35,19 @@
         </div>
       </a>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal"
-         id="menuBtn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu" id="menuBtn">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
 
-      <nav class="menu" id="menu-principal">
-        <a href="#acolhimento">Acolhimento</a>
-        <a href="#informacoes">Informações</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#faq">Dúvidas</a>
-        <a href="#cadastro" class="menu-cta">Participar</a>
-      </nav>
+<nav class="menu desktop-menu" id="menu-principal">
+  <a href="#acolhimento">Acolhimento</a>
+  <a href="#informacoes">Informações</a>
+  <a href="#projetos">Projetos</a>
+  <a href="#faq">Dúvidas</a>
+  <a href="#cadastro">Participar</a>
+</nav>
     </div>
 
     <div class="container hero reveal">
@@ -340,6 +330,20 @@
   </footer>
 
   <button class="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
+
+
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-content">
+    <button id="closeMenu" class="close-btn" type="button" aria-label="Fechar menu">&times;</button>
+
+    <a href="#acolhimento">Acolhimento</a>
+    <a href="#informacoes">Informações</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#faq">Dúvidas</a>
+    <a href="#cadastro">Participar</a>
+  </div>
+</div>
+
 
   <script src="./assets/js/script_inicial.js"></script>
 </body>
