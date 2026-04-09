@@ -74,3 +74,43 @@ if (backToTopButton) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+const menuBtn = document.getElementById("menuBtn"); // botão hamburguer
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+// abrir
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.add("active");
+  document.body.style.overflow = "hidden";
+});
+
+// fechar no X
+closeMenu.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+  document.body.style.overflow = "auto";
+});
+
+// fechar clicando fora
+mobileMenu.addEventListener("click", (e) => {
+  if (e.target === mobileMenu) {
+    mobileMenu.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+});
+
+// fechar ao clicar em link
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    document.body.style.overflow = "auto";
+  });
+});
+
+// fechar com ESC
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    mobileMenu.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+});
