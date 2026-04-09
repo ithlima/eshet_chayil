@@ -1,47 +1,85 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== VARIÁVEIS ===== */
 :root {
   --roxo-principal: #9773BE;
   --roxo-claro: #c293f2;
-  --texto-principal: #4A4A4A;
-  --texto-secundario: #5c4475;
-  --fundo-site: #f3e6d5;
+  --roxo-escuro: #5d4379;
+  --texto-principal: #4a4256;
+  --texto-suave: #6c6179;
+  --fundo-site: #f8f2ea;
+  --destaque-suave: rgba(151, 115, 190, 0.12);
+  --borda-suave: rgba(151, 115, 190, 0.12);
+  --sombra-suave: 0 18px 40px rgba(93, 67, 121, 0.10);
 }
 
-/* ===== BASE ===== */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: var(--texto-principal);
-  background-color: var(--fundo-site);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.85), transparent 20%),
+    linear-gradient(180deg, #fbf7f2 0%, #f7efe7 100%);
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* ===== TÍTULOS ===== */
-h1, h2, h3, h4 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+img {
+  max-width: 100%;
 }
 
-/* ===== LINKS ===== */
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* ===== BOTÃO BASE (reutilizável) ===== */
 button {
   cursor: pointer;
   border: none;
-  font-family: 'Inter', sans-serif;
-  transition: background-color 0.25s ease, transform 0.15s ease;
+  font-family: inherit;
+  transition: background-color 0.25s ease, transform 0.18s ease, box-shadow 0.25s ease;
 }
 
+button:hover,
+a:hover {
+  transform: translateY(-1px);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(151, 115, 190, 0.28);
+  outline-offset: 3px;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.soft-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--borda-suave);
+  border-radius: 1.6rem;
+  box-shadow: var(--sombra-suave);
+}
