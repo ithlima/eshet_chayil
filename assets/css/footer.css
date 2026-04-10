@@ -1,0 +1,30 @@
+.site-footer {
+  padding: 2rem 0 3rem;
+  background: rgba(255, 255, 255, 0.55);
+  border-top: 1px solid rgba(151, 115, 190, 0.08);
+}
+
+.site-footer strong {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: var(--roxo-escuro);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-copy {
+  text-align: right;
+}
