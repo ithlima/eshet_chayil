@@ -85,6 +85,7 @@
   color: var(--texto-principal);
   font-weight: 600;
   transition: transform 0.2s ease, background-color 0.25s ease, color 0.25s ease;
+  text-align: center;
 }
 
 .menu a:hover,
