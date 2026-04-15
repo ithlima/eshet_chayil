@@ -256,3 +256,24 @@
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.6), transparent 30%),
     linear-gradient(135deg, rgba(194, 147, 242, 0.22), rgba(248, 246, 206, 0.5));
 }
+
+.impact-strip {
+  margin-top: 1.4rem;
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  background: linear-gradient(135deg, rgba(143, 99, 186, 0.12), rgba(214, 179, 106, 0.18));
+}
+
+.impact-strip strong {
+  display: block;
+  color: var(--roxo-escuro);
+  font-size: 1.08rem;
+  margin-bottom: 0.35rem;
+}
+
+.impact-strip p {
+  color: var(--texto-suave);
+}

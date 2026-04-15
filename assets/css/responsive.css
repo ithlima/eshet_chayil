@@ -87,7 +87,8 @@
   }
 
   .project-item,
-  .cta-box {
+  .cta-box,
+  .impact-strip {
     flex-direction: column;
     align-items: flex-start;
   }
