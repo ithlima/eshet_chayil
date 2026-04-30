@@ -1,58 +1,122 @@
 .sponsors-section {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(
     180deg,
-    rgba(151, 115, 190, 0.08),
-    rgba(255, 255, 255, 0.4)
+    rgba(151, 115, 190, 0.07),
+    rgba(255, 255, 255, 0.38)
   );
+}
+
+.sponsors-section::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  top: 40px;
+  left: -90px;
+  border-radius: 50%;
+  background: rgba(151, 115, 190, 0.08);
+  pointer-events: none;
+}
+
+.sponsors-section::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -80px;
+  bottom: 30px;
+  border-radius: 50%;
+  background: rgba(255, 182, 193, 0.16);
+  pointer-events: none;
+}
+
+.sponsors-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .sponsors-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2.2rem;
 }
 
-.sponsor-card {
-  text-align: center;
-  padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.sponsor-logo {
-  width: 100%;
-  height: 180px;
-  margin-bottom: 1.2rem;
-  border-radius: 18px;
-  overflow: hidden;
-  background: #ffffff;
-  padding: 1rem;
+.sponsor-brand {
+  min-height: 92px;
+  padding: 1rem 1.1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--roxo-escuro);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.35px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.45rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(151, 115, 190, 0.14);
+  box-shadow: 0 10px 28px rgba(151, 115, 190, 0.08);
+  backdrop-filter: blur(8px);
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
 }
 
-.sponsor-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
+.sponsor-brand:hover {
+  transform: translateY(-5px);
+  color: var(--rosa-principal);
+  border-color: rgba(151, 115, 190, 0.32);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 18px 42px rgba(151, 115, 190, 0.16);
 }
 
-.sponsor-logo span {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  color: var(--roxo-escuro);
-  font-size: 1.1rem;
+.sponsor-name {
+  display: inline-block;
 }
 
-.sponsor-card h3 {
-  color: var(--roxo-escuro);
-  margin-bottom: 0.6rem;
-}
-
-.sponsor-card p {
+.sponsor-arrow {
   font-size: 0.95rem;
-  line-height: 1.6;
+  opacity: 0.65;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.sponsor-brand:hover .sponsor-arrow {
+  transform: translate(3px, -3px);
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .sponsors-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sponsor-brand {
+    min-height: 82px;
+    font-size: 0.95rem;
+    padding: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-brand {
+    min-height: 76px;
+  }
+}
